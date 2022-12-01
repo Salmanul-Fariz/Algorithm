@@ -35,3 +35,28 @@ console.log(factorial(0)); // 1
 console.log(factorial(1)); // 1
 console.log(factorial(5)); // 120
 // Big-O = O(n)
+
+///////////////////////////////
+////// Prime or Non-Prime /////
+///////////////////////////////
+
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+
+  for (i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log("------------------------------");
+console.log("Prime or Non-Prime");
+console.log("------------------------------");
+console.log(isPrime(1)); // false
+console.log(isPrime(3)); // true
+console.log(isPrime(5)); // true
+// Big-O = O(sqrt(n))
