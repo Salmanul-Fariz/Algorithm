@@ -40,6 +40,7 @@ console.log(factorial(5)); // 120
 ////// Prime or Non-Prime /////
 ///////////////////////////////
 
+// This algorithm is use by optimize prime number
 function isPrime(n) {
   if (n < 2) {
     return false;
@@ -60,3 +61,24 @@ console.log(isPrime(1)); // false
 console.log(isPrime(3)); // true
 console.log(isPrime(5)); // true
 // Big-O = O(sqrt(n))
+
+///////////////////////////////
+///////// Power of Two ////////
+///////////////////////////////
+
+// This algorithm is use by Bitwise
+function isPowerOfTwo(n) {
+  if (n < 1) {
+    return false;
+  }
+
+  return (n & (n - 1)) === 0;
+}
+
+console.log("------------------------------");
+console.log("Power of Two");
+console.log("------------------------------");
+console.log(isPowerOfTwo(1)); // true
+console.log(isPowerOfTwo(2)); // true
+console.log(isPowerOfTwo(5)); // false
+// Big-O = O(1)
