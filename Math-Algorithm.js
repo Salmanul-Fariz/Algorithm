@@ -82,3 +82,20 @@ console.log(isPowerOfTwo(1)); // true
 console.log(isPowerOfTwo(2)); // true
 console.log(isPowerOfTwo(5)); // false
 // Big-O = O(1)
+
+////////////////////////////////////
+/// Recursive Fibonacci Sequence ///
+////////////////////////////////////
+
+function recursiveFbonacci(n) {
+  if (n < 2) return n;
+
+  return recursiveFbonacci(n - 1) + recursiveFbonacci(n - 2);
+}
+console.log("------------------------------");
+console.log("Recursive Fibonacci Sequence");
+console.log("------------------------------");
+console.log(recursiveFbonacci(0)); // 0
+console.log(recursiveFbonacci(1)); // 1
+console.log(recursiveFbonacci(3)); // 8
+// Big-O = O(n^2) - recursive fibonacci is not good
